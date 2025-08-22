@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mind Morph Learning</title>
+    <meta name="description" content="Interactive Learning Platform" />
+    <meta name="author" content="Mind Morph" />
+
+    <meta property="og:title" content="Mind Morph Learning" />
+    <meta property="og:description" content="Interactive Learning Platform" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@mindmorph" />
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="src/styles/main.css">
+    <link rel="stylesheet" href="src/styles/components.css">
+    <link rel="stylesheet" href="src/styles/pages.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <h2>Mind Morph Learning</h2>
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#home" class="nav-link active">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#math" class="nav-link">Math</a>
+          </li>
+          <li class="nav-item">
+            <a href="#science" class="nav-link">Science</a>
+          </li>
+          <li class="nav-item">
+            <a href="#english" class="nav-link">English</a>
+          </li>
+          <li class="nav-item">
+            <a href="#life-skills" class="nav-link">Life Skills</a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+      <!-- Home Page -->
+      <section id="home" class="page active">
+        <div class="container">
+          <div class="hero-section">
+            <h1>Welcome to Mind Morph Learning</h1>
+            <p>Transform your learning experience with interactive modules</p>
+            <div class="hero-buttons">
+              <button class="btn btn-primary" onclick="startLearning()">Start Learning</button>
+              <button class="btn btn-secondary" onclick="viewModules()">View Modules</button>
+            </div>
+          </div>
+          
+          <div class="modules-grid">
+            <div class="module-card" onclick="navigateToModule('math')">
+              <div class="module-icon">
+                <i class="fas fa-calculator"></i>
+              </div>
+              <h3>Mathematics</h3>
+              <p>Master numbers, equations, and problem-solving</p>
+            </div>
+            
+            <div class="module-card" onclick="navigateToModule('science')">
+              <div class="module-icon">
+                <i class="fas fa-flask"></i>
+              </div>
+              <h3>Science</h3>
+              <p>Explore the wonders of the natural world</p>
+            </div>
+            
+            <div class="module-card" onclick="navigateToModule('english')">
+              <div class="module-icon">
+                <i class="fas fa-book"></i>
+              </div>
+              <h3>English</h3>
+              <p>Improve your language and communication skills</p>
+            </div>
+            
+            <div class="module-card" onclick="navigateToModule('life-skills')">
+              <div class="module-icon">
+                <i class="fas fa-heart"></i>
+              </div>
+              <h3>Life Skills</h3>
+              <p>Develop essential skills for everyday life</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Math Module -->
+      <section id="math" class="page">
+        <div class="container">
+          <div class="module-header">
+            <h1>Mathematics Module</h1>
+            <p>Master fundamental mathematical concepts</p>
+          </div>
+          
+          <div class="learning-content">
+            <div class="lesson-card">
+              <h3>Basic Arithmetic</h3>
+              <div class="interactive-widget">
+                <div class="calculator">
+                  <input type="text" id="calc-display" readonly>
+                  <div class="calc-buttons">
+                    <button onclick="calcInput('7')">7</button>
+                    <button onclick="calcInput('8')">8</button>
+                    <button onclick="calcInput('9')">9</button>
+                    <button onclick="calcInput('+')">+</button>
+                    <button onclick="calcInput('4')">4</button>
+                    <button onclick="calcInput('5')">5</button>
+                    <button onclick="calcInput('6')">6</button>
+                    <button onclick="calcInput('-')">-</button>
+                    <button onclick="calcInput('1')">1</button>
+                    <button onclick="calcInput('2')">2</button>
+                    <button onclick="calcInput('3')">3</button>
+                    <button onclick="calcInput('*')">×</button>
+                    <button onclick="calcInput('0')">0</button>
+                    <button onclick="calcInput('.')">.</button>
+                    <button onclick="calcClear()">C</button>
+                    <button onclick="calcInput('/')">÷</button>
+                    <button onclick="calcResult()" class="equals">=</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Science Module -->
+      <section id="science" class="page">
+        <div class="container">
+          <div class="module-header">
+            <h1>Science Module</h1>
+            <p>Explore the wonders of science</p>
+          </div>
+          
+          <div class="learning-content">
+            <div class="lesson-card">
+              <h3>Physics Basics</h3>
+              <div class="interactive-widget">
+                <div class="gravity-simulator">
+                  <canvas id="gravity-canvas" width="400" height="300"></canvas>
+                  <div class="sim-controls">
+                    <button onclick="startGravitySim()">Start Simulation</button>
+                    <button onclick="resetGravitySim()">Reset</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- English Module -->
+      <section id="english" class="page">
+        <div class="container">
+          <div class="module-header">
+            <h1>English Module</h1>
+            <p>Improve your language skills</p>
+          </div>
+          
+          <div class="learning-content">
+            <div class="lesson-card">
+              <h3>Vocabulary Builder</h3>
+              <div class="interactive-widget">
+                <div class="vocab-game">
+                  <div class="word-display">
+                    <h4 id="current-word">Click Start to begin</h4>
+                  </div>
+                  <div class="word-input">
+                    <input type="text" id="word-input" placeholder="Type the word...">
+                    <button onclick="checkWord()">Check</button>
+                  </div>
+                  <div class="game-controls">
+                    <button onclick="startVocabGame()">Start Game</button>
+                    <button onclick="resetVocabGame()">Reset</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Life Skills Module -->
+      <section id="life-skills" class="page">
+        <div class="container">
+          <div class="module-header">
+            <h1>Life Skills Module</h1>
+            <p>Develop essential life skills</p>
+          </div>
+          
+          <div class="learning-content">
+            <div class="lesson-card">
+              <h3>Time Management</h3>
+              <div class="interactive-widget">
+                <div class="timer-app">
+                  <div class="timer-display">
+                    <span id="timer-minutes">25</span>:<span id="timer-seconds">00</span>
+                  </div>
+                  <div class="timer-controls">
+                    <button onclick="startTimer()">Start</button>
+                    <button onclick="pauseTimer()">Pause</button>
+                    <button onclick="resetTimer()">Reset</button>
+                  </div>
+                  <div class="timer-settings">
+                    <label>Minutes: <input type="number" id="timer-input" value="25" min="1" max="60"></label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Focus Tracker -->
+    <div class="focus-tracker" id="focus-tracker">
+      <div class="focus-header">
+        <h3>Focus Tracker</h3>
+        <button onclick="toggleFocusTracker()" class="close-btn">×</button>
+      </div>
+      <div class="focus-content">
+        <div class="focus-timer">
+          <span id="focus-time">00:00</span>
+        </div>
+        <div class="focus-controls">
+          <button onclick="startFocus()" id="focus-start">Start Focus</button>
+          <button onclick="stopFocus()" id="focus-stop" disabled>Stop</button>
+        </div>
+        <div class="focus-stats">
+          <p>Today's Focus Time: <span id="today-focus">0</span> minutes</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="src/js/main.js"></script>
+    <script src="src/js/navigation.js"></script>
+    <script src="src/js/modules.js"></script>
+    <script src="src/js/focus-tracker.js"></script>
+  </body>
+</html>

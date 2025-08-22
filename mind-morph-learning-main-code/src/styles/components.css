@@ -1,0 +1,487 @@
+/* Calculator Styles */
+.calculator {
+  background-color: var(--surface-color);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-md);
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+#calc-display {
+  width: 100%;
+  height: 60px;
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius);
+  font-size: 1.5rem;
+  text-align: right;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+  background-color: var(--background-color);
+  color: var(--text-primary);
+}
+
+.calc-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+
+.calc-buttons button {
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  background-color: var(--surface-color);
+  color: var(--text-primary);
+  font-size: 1.2rem;
+  font-weight: 500;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.calc-buttons button:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: translateY(-1px);
+}
+
+.calc-buttons button.equals {
+  grid-column: span 2;
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.calc-buttons button.equals:hover {
+  background-color: #059669;
+}
+
+/* Timer App Styles */
+.timer-app {
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.timer-display {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  font-family: 'Courier New', monospace;
+}
+
+.timer-controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.timer-controls button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.timer-controls button:first-child {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.timer-controls button:nth-child(2) {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.timer-controls button:last-child {
+  background-color: var(--text-secondary);
+  color: white;
+}
+
+.timer-controls button:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.timer-settings {
+  background-color: var(--background-color);
+  padding: 1rem;
+  border-radius: var(--radius);
+}
+
+.timer-settings label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+.timer-settings input {
+  width: 80px;
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+/* Vocabulary Game Styles */
+.vocab-game {
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.word-display {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 2rem;
+  border-radius: var(--radius);
+  margin-bottom: 2rem;
+}
+
+.word-display h4 {
+  font-size: 2rem;
+  margin: 0;
+  color: white;
+}
+
+.word-input {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.word-input input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius);
+  font-size: 1rem;
+}
+
+.word-input input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.word-input button {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.game-controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.game-controls button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.game-controls button:first-child {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.game-controls button:last-child {
+  background-color: var(--text-secondary);
+  color: white;
+}
+
+/* Gravity Simulator Styles */
+.gravity-simulator {
+  text-align: center;
+}
+
+#gravity-canvas {
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius);
+  background-color: var(--surface-color);
+  margin-bottom: 1rem;
+}
+
+.sim-controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.sim-controls button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.sim-controls button:first-child {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.sim-controls button:last-child {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+/* Focus Tracker Styles */
+.focus-tracker {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: var(--surface-color);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+  width: 300px;
+  z-index: 1000;
+  transform: translateX(100%);
+  transition: var(--transition);
+}
+
+.focus-tracker.active {
+  transform: translateX(0);
+}
+
+.focus-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.focus-header h3 {
+  margin: 0;
+  color: white;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: var(--transition);
+}
+
+.close-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.focus-content {
+  padding: 1.5rem;
+}
+
+.focus-timer {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.focus-timer span {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  font-family: 'Courier New', monospace;
+}
+
+.focus-controls {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.focus-controls button {
+  flex: 1;
+  padding: 0.75rem;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+#focus-start {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+#focus-stop {
+  background-color: #ef4444;
+  color: white;
+}
+
+#focus-stop:disabled {
+  background-color: var(--text-secondary);
+  cursor: not-allowed;
+}
+
+.focus-stats {
+  text-align: center;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.focus-stats p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* Notification Styles */
+.notification {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  background-color: var(--surface-color);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  padding: 1rem 1.5rem;
+  border-left: 4px solid var(--secondary-color);
+  transform: translateX(100%);
+  transition: var(--transition);
+  z-index: 1001;
+  max-width: 300px;
+}
+
+.notification.show {
+  transform: translateX(0);
+}
+
+.notification.success {
+  border-left-color: var(--secondary-color);
+}
+
+.notification.error {
+  border-left-color: #ef4444;
+}
+
+.notification.info {
+  border-left-color: var(--primary-color);
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid var(--border-color);
+  border-radius: 50%;
+  border-top-color: var(--primary-color);
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Progress Bar */
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: var(--border-color);
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+/* Card Hover Effects */
+.module-card,
+.lesson-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.module-card::before,
+.lesson-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.module-card:hover::before,
+.lesson-card:hover::before {
+  left: 100%;
+}
+
+/* Responsive Components */
+@media (max-width: 768px) {
+  .focus-tracker {
+    width: calc(100vw - 2rem);
+    right: 1rem;
+    bottom: 1rem;
+  }
+
+  .timer-display {
+    font-size: 3rem;
+  }
+
+  .word-display h4 {
+    font-size: 1.5rem;
+  }
+
+  .calc-buttons button {
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+
+  .notification {
+    right: 1rem;
+    left: 1rem;
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .timer-controls,
+  .game-controls,
+  .sim-controls {
+    flex-direction: column;
+  }
+
+  .word-input {
+    flex-direction: column;
+  }
+
+  .focus-controls {
+    flex-direction: column;
+  }
+}
